@@ -6,8 +6,14 @@
   "author": "Anton_Kosarev <kosarev.anton.p@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node ./scripts/webpack/start.js",
+    "build": "node ./scripts/webpack/build.js",
+    "dev": "webpacknpm  --config=scripts/webpack/webpack.config",
+    "public": "webpack --mode=production",
     "checkpoint": "",
-    "sync": ""
+    "sync": "",
+    "serve_old": "serve ./dist -s",
+    "serve": "node ./scripts/webpack/serve.js"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -16,9 +22,17 @@
     "@babel/register": "^7.18.9",
     "app-root-path": "^3.1.0",
     "babel-plugin-dynamic-import-node": "^2.3.3",
+    "chalk": "^5.2.0",
+    "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
     "moment": "^2.29.4",
+    "serve": "^14.1.2",
+    "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-hot-middleware": "^2.25.3"
   }
 }

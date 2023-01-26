@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack --config=webpack.config",
-    "start": "webpack serve",
-    "react": "webpack-dev-server --hot"
+    "start": "webpack serve"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

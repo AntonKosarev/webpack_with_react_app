@@ -1,4 +1,3 @@
-import {hot} from 'react-hot-loader/root';
 import app from './App.js';
 import dom from './components/dom';
 

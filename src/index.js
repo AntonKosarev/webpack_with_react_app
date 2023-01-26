@@ -1,13 +1,12 @@
-import component from './components/dom';
+import {hot} from 'react-hot-loader/root';
+import app from './App.js';
+import dom from './components/dom';
 
-let element = component();
-document.body.appendChild(element);
+let element = dom();
+document.querySelector('#app').appendChild(element);
 
-
-if (module.hot) {
-    module.hot.accept('./components/dom', function () {
-        document.removeChild(element);
-        element = component();
-        document.body.appendChild(element);
-    });
-}
+hot(() => {
+    document.removeChild(element);
+    element = app();
+    document.body.appendChild(element);
+});
